@@ -1,5 +1,6 @@
 package hello.hello_spring.config;
 
+import hello.hello_spring.aop.TimeTraceAop;
 import hello.hello_spring.repository.JdbcMemberRepository;
 import hello.hello_spring.repository.JdbcTemplateMemberRepository;
 import hello.hello_spring.repository.JpaMemberRepository;
