@@ -5,9 +5,11 @@ import hello.core.member.Member;
 import hello.core.member.MemberRepository;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
 @Getter
 @RequiredArgsConstructor
+@Component
 public class OrderServiceImpl implements OrderService {
 	private final MemberRepository memberRepository;
 	private final DiscountPolicy discountPolicy;
