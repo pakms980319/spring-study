@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: springmvc
+logging:
+  level:
+    hello:
+      springmvc: debug
