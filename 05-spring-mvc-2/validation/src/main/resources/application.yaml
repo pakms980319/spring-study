@@ -2,4 +2,4 @@ spring:
   application:
     name: item-service
   messages:
-    basename:messages
+    basename: messages,errors
