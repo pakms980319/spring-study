@@ -1,4 +1,4 @@
-package hello.item_service.web.validation.v1;
+package hello.item_service.web.validation;
 
 import hello.item_service.domain.item.DeliveryCode;
 import hello.item_service.domain.item.Item;
