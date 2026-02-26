@@ -1,5 +1,6 @@
 package hello.jdbc.basic;
 
+import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -7,7 +8,18 @@ import java.sql.SQLException;
 
 import static org.assertj.core.api.Assertions.*;
 
+@Slf4j
 public class UnCheckedAppTest {
+
+	@Test
+	void printEx() {
+		Controller controller = new Controller();
+		try {
+			controller.request();
+		} catch (Exception e) {
+			log.info("ex", e);
+		}
+	}
 
 	@Test
 	void unChecked() {
@@ -44,7 +56,7 @@ public class UnCheckedAppTest {
 			try {
 				runSQL();
 			} catch (SQLException e) {
-				throw new RuntimeSQLException(e);
+				throw new RuntimeSQLException();
 			}
 		}
 
@@ -60,6 +72,9 @@ public class UnCheckedAppTest {
 	}
 
 	static class RuntimeSQLException extends RuntimeException {
+		public RuntimeSQLException() {
+		}
+
 		public RuntimeSQLException(Throwable cause) {
 			super(cause);
 		}
